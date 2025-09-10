@@ -86,63 +86,64 @@
 .equ	BOOT_RX_TRIES = 20
 
 ; STK message constants
-.equ	MESSAGE_START			= 0x1b
-.equ	TOKEN				= 0x0e
+.equ	MESSAGE_START					= 0x1b
+.equ	TOKEN							= 0x0e
 
 ; STK general command constants
-.equ	CMD_SIGN_ON			= 0x01
-.equ	CMD_SET_PARAMETER		= 0x02
-.equ	CMD_GET_PARAMETER		= 0x03
-.equ	CMD_SET_DEVICE_PARAMETERS	= 0x04
-.equ	CMD_OSCCAL			= 0x05
-.equ	CMD_LOAD_ADDRESS		= 0x06
-.equ	CMD_FIRMWARE_UPGRADE		= 0x07
-.equ	CMD_CHECK_TARGET_CONNECTION	= 0x0d
-.equ	CMD_LOAD_RC_ID_TABLE		= 0x0e
-.equ	CMD_LOAD_EC_ID_TABLE		= 0x0f
+.equ	CMD_SIGN_ON						= 0x01
+.equ	CMD_SET_PARAMETER				= 0x02
+.equ	CMD_GET_PARAMETER				= 0x03
+.equ	CMD_SET_DEVICE_PARAMETERS		= 0x04
+.equ	CMD_OSCCAL						= 0x05
+.equ	CMD_LOAD_ADDRESS				= 0x06
+.equ	CMD_FIRMWARE_UPGRADE			= 0x07
+.equ	CMD_CHECK_TARGET_CONNECTION		= 0x0d
+.equ	CMD_LOAD_RC_ID_TABLE			= 0x0e
+.equ	CMD_LOAD_EC_ID_TABLE			= 0x0f
 
 ; STK ISP command constants
-.equ	CMD_ENTER_PROGMODE_ISP		= 0x10
-.equ	CMD_LEAVE_PROGMODE_ISP		= 0x11
-.equ	CMD_CHIP_ERASE_ISP		= 0x12
-.equ	CMD_PROGRAM_FLASH_ISP		= 0x13
-.equ	CMD_READ_FLASH_ISP		= 0x14
-.equ	CMD_PROGRAM_EEPROM_ISP		= 0x15
-.equ	CMD_READ_EEPROM_ISP		= 0x16
-.equ	CMD_PROGRAM_FUSE_ISP		= 0x17
-.equ	CMD_READ_FUSE_ISP		= 0x18
-.equ	CMD_PROGRAM_LOCK_ISP		= 0x19
-.equ	CMD_READ_LOCK_ISP		= 0x1a
-.equ	CMD_READ_SIGNATURE_ISP		= 0x1b
-.equ	CMD_READ_OSCCAL_ISP		= 0x1c
-.equ	CMD_SPI_MULTI			= 0x1d
+.equ	CMD_ENTER_PROGMODE_ISP			= 0x10
+.equ	CMD_LEAVE_PROGMODE_ISP			= 0x11
+.equ	CMD_CHIP_ERASE_ISP				= 0x12
+.equ	CMD_PROGRAM_FLASH_ISP			= 0x13
+.equ	CMD_READ_FLASH_ISP				= 0x14
+.equ	CMD_PROGRAM_EEPROM_ISP			= 0x15
+.equ	CMD_READ_EEPROM_ISP				= 0x16
+.equ	CMD_PROGRAM_FUSE_ISP			= 0x17
+.equ	CMD_READ_FUSE_ISP				= 0x18
+.equ	CMD_PROGRAM_LOCK_ISP			= 0x19
+.equ	CMD_READ_LOCK_ISP				= 0x1a
+.equ	CMD_READ_SIGNATURE_ISP			= 0x1b
+.equ	CMD_READ_OSCCAL_ISP				= 0x1c
+.equ	CMD_SPI_MULTI					= 0x1d
 
 ; STK status constants
-.equ	STATUS_CMD_OK			= 0x00
-.equ	STATUS_CMD_TOUT			= 0x80
-.equ	STATUS_RDY_BSY_TOUT		= 0x81
-.equ	STATUS_SET_PARAM_MISSING	= 0x82
-.equ	STATUS_CMD_FAILED		= 0xc0
-.equ	STATUS_CKSUM_ERROR		= 0xc1
-.equ	STATUS_CMD_UNKNOWN		= 0xc9
+.equ	STATUS_CMD_OK					= 0x00
+.equ	STATUS_CMD_TOUT					= 0x80
+.equ	STATUS_RDY_BSY_TOUT				= 0x81
+.equ	STATUS_SET_PARAM_MISSING		= 0x82
+.equ	STATUS_CMD_FAILED				= 0xc0
+.equ	STATUS_CKSUM_ERROR				= 0xc1
+.equ	STATUS_CMD_UNKNOWN				= 0xc9
 .equ	STATUS_CMD_ILLEGAL_PARAMETER	= 0xca
 
 ; STK parameter constants
-.equ	PARAM_BUILD_NUMBER_LOW		= 0x80
-.equ	PARAM_BUILD_NUMBER_HIGH		= 0x81
-.equ	PARAM_HW_VER			= 0x90
-.equ	PARAM_SW_MAJOR			= 0x91
-.equ	PARAM_SW_MINOR			= 0x92
-.equ	PARAM_VTARGET			= 0x94
-.equ	PARAM_VADJUST			= 0x95 ; STK500 only
-.equ	PARAM_OSC_PSCALE		= 0x96 ; STK500 only
-.equ	PARAM_OSC_CMATCH		= 0x97 ; STK500 only
-.equ	PARAM_SCK_DURATION		= 0x98 ; STK500 only
-.equ	PARAM_TOPCARD_DETECT		= 0x9a ; STK500 only
-.equ	PARAM_STATUS			= 0x9c ; STK500 only
-.equ	PARAM_DATA			= 0x9d ; STK500 only
-.equ	PARAM_RESET_POLARITY		= 0x9e ; STK500 only, and STK600 FW version <= 2.0.3
-.equ	PARAM_CONTROLLER_INIT		= 0x9f
+.equ	PARAM_BUILD_NUMBER_LOW			= 0x80
+.equ	PARAM_BUILD_NUMBER_HIGH			= 0x81
+.equ	PARAM_HW_VER					= 0x90
+.equ	PARAM_SW_MAJOR					= 0x91
+.equ	PARAM_SW_MINOR					= 0x92
+.equ	PARAM_VTARGET					= 0x94
+.equ	PARAM_VADJUST					= 0x95 ; STK500 only
+.equ	PARAM_OSC_PSCALE				= 0x96 ; STK500 only
+.equ	PARAM_OSC_CMATCH				= 0x97 ; STK500 only
+.equ	PARAM_SCK_DURATION				= 0x98 ; STK500 only
+.equ	PARAM_TOPCARD_DETECT			= 0x9a ; STK500 only
+.equ	PARAM_STATUS					= 0x9c ; STK500 only
+.equ	PARAM_DATA						= 0x9d ; STK500 only
+.equ	PARAM_RESET_POLARITY			= 0x9e ; STK500 only, and STK600 FW version <= 2.0.3
+.equ	PARAM_CONTROLLER_INIT			= 0x9f
+
 
 ; Support listening on ICP pin (on AfroESCs)
 .if defined(USE_ICP) && USE_ICP
@@ -163,25 +164,25 @@
 .equ BOOT_START = THIRDBOOTSTART
 .endif
 .org BOOT_START
-boot_reset:	ldi	ZL, high(RAMEND)	; Set up stack
-		ldi	ZH, low(RAMEND)
-		out	SPH, ZH
-		out	SPL, ZL
-		ldi	r16, 0			; Use r16 as zero
-		ldi	ZL, low(stk_rx_start)
-		ldi	ZH, high(stk_rx_start)
-		ldi	YL, low(RX_BUFFER)
-		ldi	YH, high(RX_BUFFER)
-		ldi	XL, low(TX_BUFFER)
-		ldi	XH, high(TX_BUFFER)
-		ldi	r20, (1<<CS21)		; timer2: clk/8 ... 256 ticks @ 16MHz = 128us; @ 8MHz = 256us
-		out	TCCR2, r20
-		ldi	r21, -BOOT_RX_TRIES
-boot_rx_time:	inc	r21
-		breq	boot_exit		; Exit if too many unsuccessful rx restarts
-		ldi	r20, (1<<TOV2)+(1<<OCF2)
-		out	TCNT2, r16
-		out	TIFR, r20
+boot_reset:	ldi		ZL, high(RAMEND)		; Set up stack
+		ldi		ZH, low(RAMEND)
+		out		SPH, ZH
+		out		SPL, ZL
+		ldi		r16, 0						; Use r16 as zero
+		ldi		ZL, low(stk_rx_start)
+		ldi		ZH, high(stk_rx_start)
+		ldi		YL, low(RX_BUFFER)
+		ldi		YH, high(RX_BUFFER)
+		ldi		XL, low(TX_BUFFER)
+		ldi		XH, high(TX_BUFFER)
+		ldi		r20, (1 << CS21)			; timer2: clk/8 ... 256 ticks @ 16MHz = 128us; @ 8MHz = 256us
+		out		TCCR2, r20
+		ldi		r21, -BOOT_RX_TRIES
+boot_rx_time:	inc		r21
+		breq	boot_exit					; Exit if too many unsuccessful rx restarts
+		ldi		r20, (1 << TOV2) + (1 << OCF2)
+		out		TCNT2, r16
+		out		TIFR, r20
 boot_rx_time1:	cpi	XL, low(TX_BUFFER)
 		breq	boot_rx_no_tx
 		in	r14, TIFR
@@ -290,53 +291,53 @@ boot_tx_lead2:	in	r14, TIFR
 
 		ldi	r22, 0
 		ldi	r24, 1
-		rjmp	boot_tx_bits		; Send single start bit first
+		rjmp	boot_tx_bits				; Send single start bit first
 
 	; Interleaving rx/tx here to avoid branching trampolines.
-boot_rx_bit:	ror	r22			; Roll rx bit in carry into r22
-		brcc	boot_rx			; More bits to receive unless sentinel bit reached carry flag
+boot_rx_bit:	ror	r22						; Roll rx bit in carry into r22
+		brcc	boot_rx						; More bits to receive unless sentinel bit reached carry flag
 		subi	r24, 1
-		brcc	boot_rx_skip		; Don't store leader bytes
-		ldi	r21, -BOOT_RX_TRIES	; Clear timeout on byte received
-		ijmp				; Jump to current state handler
+		brcc	boot_rx_skip				; Don't store leader bytes
+		ldi		r21, -BOOT_RX_TRIES			; Clear timeout on byte received
+		ijmp								; Jump to current state handler
 
-boot_tx:	cp	YL, XL
-		cpc	YH, XH
+boot_tx:	cp		YL, XL
+		cpc		YH, XH
 		breq	boot_tx_end
-		ld	r22, Y+
-		ldi	r24, 8			; Send 8 bits
-boot_tx_bits:	lsr	r22			; Put next bit in carry flag
-		sbi	RCP_PORT, rcp_in	; Drive high
-		out	TCNT2, r3
-		out	TIFR, r20
-boot_tx1:	in	r14, TIFR
+		ld		r22, Y+
+		ldi		r24, 8						; Send 8 bits
+boot_tx_bits:	lsr		r22					; Put next bit in carry flag
+		sbi		RCP_PORT, rcp_in			; Drive high
+		out		TCNT2, r3
+		out		TIFR, r20
+boot_tx1:	in		r14, TIFR
 		brcs	boot_tx2
 		sbrc	r14, OCF2
-		out	RCP_PORT, r16		; Drive low
+		out		RCP_PORT, r16				; Drive low
 boot_tx2:	sbrs	r14, TOV2
 		rjmp	boot_tx1
-		cbi	RCP_PORT, rcp_in
+		cbi		RCP_PORT, rcp_in
 		brcs	boot_tx_low
-		sbi	RCP_PORT, rcp_in	; Drive high
-boot_tx_low:	out	TCNT2, r2
-		out	TIFR, r20
-boot_tx3:	in	r14, TIFR
+		sbi		RCP_PORT, rcp_in			; Drive high
+boot_tx_low:	out		TCNT2, r2
+		out		TIFR, r20
+boot_tx3:	in		r14, TIFR
 		brcs	boot_tx4
 		sbrc	r14, OCF2
-		out	RCP_PORT, r16		; Drive low
+		out		RCP_PORT, r16				; Drive low
 boot_tx4:	sbrs	r14, TOV2
 		rjmp	boot_tx3
-		dec	r24
+		dec		r24
 		brne	boot_tx_bits
 		rjmp	boot_tx
 	; Go high for a quarter bit time at the end
-boot_tx_end:	sbi	RCP_PORT, rcp_in	; Drive high
-		out	TCNT2, r3
-		out	TIFR, r20
-		ldi	YL, low(RX_BUFFER)
-		ldi	YH, high(RX_BUFFER)
-		ldi	XL, low(TX_BUFFER)
-		ldi	XH, high(TX_BUFFER)
+boot_tx_end:	sbi		RCP_PORT, rcp_in	; Drive high
+		out		TCNT2, r3
+		out		TIFR, r20
+		ldi		YL, low(RX_BUFFER)
+		ldi		YH, high(RX_BUFFER)
+		ldi		XL, low(TX_BUFFER)
+		ldi		XH, high(TX_BUFFER)
 boot_tx_end1:	in	r14, TIFR
 		sbrs	r14, OCF2
 		rjmp	boot_tx_end1
@@ -447,19 +448,18 @@ chksum1:	ld	r22, Z+
 		brne	chksum1
 		st	X+, r24			; Store xor checksum
 		rjmp	stk_rx_restart
-scmd1:		cpi	r22, CMD_SPI_MULTI
+scmd1:	cpi		r22, CMD_SPI_MULTI
 		brne	scmd2
-	; avrdude uses spi_multi spi pass-through mode to check fuse bytes,
-	; so we emulate this. Constants from the Arduino stk500v2 example
-	; boot loader.
-		mov	r23, r25		; Save NumTx in r23
-		ldi	r25, 0			; Zero-extend r24
-		adiw	r24, 3			; Command, status, rx'd bytes, status
-		std	Z+3, r24		; Message body size low
-		std	Z+2, r25		; Message body size high
-		sbiw	r24, 3			; Back to just byte count
-scmd_multi1:	st	X+, r16			; Fill return buffer with zeroes
-		dec	r24
+	; avrdude uses spi_multi spi pass-through mode to check fuse bytes, so we emulate this.
+	; Constants from the Arduino stk500v2 example bootloader.
+		mov		r23, r25					; Save NumTx in r23
+		ldi		r25, 0						; Zero-extend r24
+		adiw	r24, 3						; Command, status, rx'd bytes, status
+		std		Z+3, r24					; Message body size low
+		std		Z+2, r25					; Message body size high
+		sbiw	r24, 3						; Back to just byte count
+scmd_multi1:	st		X+, r16				; Fill return buffer with zeroes
+		dec		r24
 		brne	scmd_multi1
 	; Check for signature probe
 	; Mirror address in result
@@ -638,45 +638,45 @@ scmd_ee_wait:	sbic	EECR, EEWE		; Wait for EEPROM write to finish
 		rjmp	scmd_ee_wait
 		ret
 scmd_spm:	rcall	scmd_spm_wait
-		out	SPMCR, r22		; Set SPM mode
+		out		SPMCR, r22					; Set SPM mode
 		spm
 		ret
 
 scmd_blob_message_size:
-		adiw	r24, 3			; Command, status, (data), status
-		std	Z+2, r25		; Message body size high
-		std	Z+3, r24		; Message body size low
-		sbiw	r24, 3			; Back to just the byte count
+		adiw	r24, 3						; Command, status, (data), status
+		std		Z+2, r25					; Message body size high
+		std		Z+3, r24					; Message body size low
+		sbiw	r24, 3						; Back to just the byte count
 		ret
 
 boot_eeprom_rw:	rcall	boot_spm_wait
-		out	EEARH, r13
-		out	EEARL, r12
+		out		EEARH, r13
+		out		EEARL, r12
 		sec
-		adc	r12, r16		; Increment address
-		adc	r13, r16
-		mov	r23, r22		; Save desired value
-		sbi	EECR, EERE		; Read existing EEPROM byte
-		in	r22, EEDR
-		cpse	r22, r23		; Return if byte matches
-		sbrs	r17, EEMWE		; Return if only reading
+		adc		r12, r16					; Increment address
+		adc		r13, r16
+		mov		r23, r22					; Save desired value
+		sbi		EECR, EERE					; Read existing EEPROM byte
+		in		r22, EEDR
+		cpse	r22, r23					; Return if byte matches
+		sbrs	r17, EEMWE					; Return if only reading
 		ret
-		out	EEDR, r23		; Set new byte
-		sbi	EECR, EEMWE		; Write arming
-		out	EECR, r17		; Write
+		out		EEDR, r23					; Set new byte
+		sbi		EECR, EEMWE					; Write arming
+		out		EECR, r17					; Write
 		ret
 
 ; Erase flash space before boot loader (used for "chip erase")
 boot_clear_flash:
-		movw	r14, ZL			; Save Z
-		ldi	ZL, low(BOOT_START)
-		ldi	ZH, high(BOOT_START)
-		ldi	r22, (1<<PGERS)+(1<<SPMEN)
+		movw	r14, ZL						; Save Z
+		ldi		ZL, low(BOOT_START)
+		ldi		ZH, high(BOOT_START)
+		ldi		r22, (1 << PGERS) + (1 << SPMEN)
 boot_clear_fl1:	sbiw	ZL, PAGESIZE
-		rcall	boot_spm		; Erase page (never this code)
+		rcall	boot_spm					; Erase page (never this code)
 		brne	boot_clear_fl1
-		movw	r12, ZL			; Zero r12:r13 (for EEPROM address later)
-		movw	ZL, r14			; Restore Z
+		movw	r12, ZL						; Zero r12:r13 (for EEPROM address later)
+		movw	ZL, r14						; Restore Z
 		ret
 
 ; Pad out the boot loader to work around avrdude verifying gaps
@@ -700,25 +700,26 @@ boot_clear_fl1:	sbiw	ZL, PAGESIZE
 		nop
 
 ; Keep these addresses within a page so that we can self-update.
-.org FLASHEND + 1 - 32
+.org 	FLASHEND + 1 - 32
 description:
 	.db "http://github.com/sim-/tgy/", 0	; Hello!
 avrisp_response_w:
 	.equ SIGNATURE_LENGTH = 8
-	.db "AVRISP_2"				; stk500v2 signature
+	.db "AVRISP_2"							; stk500v2 signature
 
-boot_spm_wait:	in	r23, SPMCR		; Wait for previous SPM to finish
+boot_spm_wait:	in		r23, SPMCR			; Wait for previous SPM to finish
 		sbrc	r23, SPMEN
 		rjmp	boot_spm_wait
-boot_ee_wait:	sbic	EECR, EEWE		; Wait for EEPROM write to finish
+boot_ee_wait:	sbic	EECR, EEWE			; Wait for EEPROM write to finish
 		rjmp	boot_ee_wait
 		ret
-boot_wr_flash:	rcall	boot_spm		; Erase page
-		ldi	r22, (1<<PGWRT)+(1<<SPMEN)
-		rcall	boot_spm		; Write page
-boot_rwwsb_wt:	ldi	r22, (1<<RWWSRE)+(1<<SPMEN)
+boot_wr_flash:	rcall	boot_spm			; Erase page
+		ldi		r22, (1 << PGWRT) + (1 << SPMEN)
+		rcall	boot_spm					; Write page
+boot_rwwsb_wt:	ldi		r22, (1 << RWWSRE) + (1 << SPMEN)
 boot_spm:	rcall	boot_spm_wait
-		out	SPMCR, r22		; Set SPM mode
+		out		SPMCR, r22					; Set SPM mode
 		spm
 		ret
 .exit
+

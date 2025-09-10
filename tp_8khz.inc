@@ -16,8 +16,8 @@
 ; problem that causes self-destruction if the P-ch body diode
 ; is conducting when the PWM chops on. This happens less often
 ; at 8kHz, so, uhh...fixed!
-.equ    MIN_DUTY        = 58 * 40 / 16
-.equ    POWER_RANGE     = 800 * 40 / 16 + MIN_DUTY
+.equ	MIN_DUTY		= 58 * 40 / 16
+.equ	POWER_RANGE		= 800 * 40 / 16 + MIN_DUTY
 
 ;*********************
 ; PORT D definitions *
@@ -44,17 +44,17 @@
 ;*********************
 ; PORT C definitions *
 ;*********************
-;.equ			= 0	; ADC0
-;.equ			= 1	; ADC1
+;.equ				= 0	; ADC0
+;.equ				= 1	; ADC1
 .equ	mux_a		= 2	; ADC2 phase input
 .equ	mux_b		= 3	; ADC3 phase input
 .equ	mux_c		= 4	; ADC4 phase input
-;.equ			= 5	; ADC5
-;.equ			= 6	; ADC6
+;.equ				= 5	; ADC5
+;.equ				= 6	; ADC6
 .equ	mux_voltage	= 7	; ADC7 voltage input
 
-.equ    O_POWER         = 470
-.equ    O_GROUND        = 47
+.equ	O_POWER		= 470
+.equ	O_GROUND	= 47
 
 .equ	INIT_PC		= 0
 .equ	DIR_PC		= 0
@@ -62,14 +62,14 @@
 ;*********************
 ; PORT B definitions *
 ;*********************
-;.equ			= 7
-;.equ			= 6
-;.equ			= 5	(sck stk200 interface)
-;.equ			= 4	(miso stk200 interface)
-;.equ			= 3	(mosi stk200 interface)
-;.equ			= 2	
-;.equ			= 1	
-;.equ			= 0	; connected with pb4 ???
+;.equ				= 7
+;.equ				= 6
+;.equ				= 5	(sck stk200 interface)
+;.equ				= 4	(miso stk200 interface)
+;.equ				= 3	(mosi stk200 interface)
+;.equ				= 2
+;.equ				= 1
+;.equ				= 0	; connected with pb4 ???
 
 .equ	INIT_PB		= 0
 .equ	DIR_PB		= 0
@@ -82,3 +82,4 @@
 .ENDMACRO
 .MACRO GRN_off
 .ENDMACRO
+
