@@ -4,13 +4,13 @@
 ;* Fuses should be lfuse=0x3f hfuse=0xca *
 ;*****************************************
 
-.equ	F_CPU		= 16000000
-.equ	USE_INT0	= 0
-.equ	USE_I2C		= 1
-.equ	USE_UART	= 1
-.equ	USE_ICP		= 1
+.equ	F_CPU			= 16000000
+.equ	USE_INT0		= 0
+.equ	USE_I2C			= 1
+.equ	USE_UART		= 1
+.equ	USE_ICP			= 1
 
-.equ	DEAD_LOW_NS	= 300
+.equ	DEAD_LOW_NS		= 300
 .equ	DEAD_HIGH_NS	= 300
 .equ	MOTOR_ADVANCE	= 15
 .equ	CHECK_HARDWARE	= 1
@@ -18,11 +18,11 @@
 ;*********************
 ; PORT B definitions *
 ;*********************
-;.equ			= 7
-;.equ			= 6
-;.equ			= 5	(sck)
-;.equ			= 4	(miso)
-;.equ			= 3	(mosi)
+;.equ				= 7
+;.equ				= 6
+;.equ				= 5	(sck)
+;.equ				= 4	(miso)
+;.equ				= 3	(mosi)
 .equ	BpFET		= 2	;o
 .equ	CpFET		= 1	;o
 .equ	rcp_in		= 0	;i r/c pulse input
@@ -36,17 +36,17 @@
 ;*********************
 ; PORT C definitions *
 ;*********************
-.equ	mux_voltage	= 7	; ADC7 voltage input (18k from Vbat, 3.3k to gnd, 10.10V -> 1.565V at ADC7)
+.equ	mux_voltage		= 7	; ADC7 voltage input (18k from Vbat, 3.3k to gnd, 10.10V -> 1.565V at ADC7)
 .equ	mux_temperature	= 6	; ADC6 temperature input (3.3k from +5V, 10k NTC to gnd)
-.equ	i2c_clk		= 5	; ADC5/SCL
-.equ	i2c_data	= 4	; ADC4/SDA
-.equ	red_led		= 3	; o
-.equ	green_led	= 2	; o
-.equ	mux_b		= 1	; ADC1 phase input
-.equ	mux_a		= 0	; ADC0 phase input
+.equ	i2c_clk			= 5	; ADC5/SCL
+.equ	i2c_data		= 4	; ADC4/SDA
+.equ	red_led			= 3	; o
+.equ	green_led		= 2	; o
+.equ	mux_b			= 1	; ADC1 phase input
+.equ	mux_a			= 0	; ADC0 phase input
 
-.equ	O_POWER		= 180
-.equ	O_GROUND	= 33
+.equ	O_POWER			= 180
+.equ	O_GROUND		= 33
 
 .equ	INIT_PC		= (1<<i2c_clk)+(1<<i2c_data)
 .equ	DIR_PC		= 0
