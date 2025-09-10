@@ -54,6 +54,7 @@ ALL_TARGETS = \
 		dlux.hex \
 		hk200a.hex \
 		hm135a.hex \
+		jmt30a.hex \
 		kda.hex \
 		mkblctrl1.hex \
 		rb50a.hex \
